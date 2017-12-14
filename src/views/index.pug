@@ -1,0 +1,73 @@
+doctype html
+
+html
+    head
+        title= title
+        //link(rel='stylesheet', href='/stylesheets/style.css')
+        //link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap.min.css')
+
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+        script(src = 'main.bundle.js')
+    body
+        include navigation.pug
+
+        include header.pug
+
+        div(class='container')
+
+          h2(class="my-4" id="about") Welcome to Amaravati American Institute of Medical Sciences, Vijayawada, Andhra Pradesh
+
+          <!-- Marketing Section -->
+          mixin marketing(title)
+            div(class="col-lg-4 mb-4")
+              div(class="card h-100")
+                h4(class="card-header")= title
+                div(class="card-body")
+                  block
+                div(class="card-footer")
+                  a(href="#" class="btn btn-primary") Learn More
+
+          div(class="row")
+            +marketing('Aim')
+              p(class="card-text") AAIMS emerges as a Centre of Medical excellence and endeavours in providing complete Medical facilities such as Healthcare, Treatment, Learning, Working and Research.
+              | It contributes to the vision of making Amaravathi a Mega Healthcare City.
+
+            +marketing('Values')
+              ul
+                li Inter-disciplinary approach in Healthcare facility planning and design process.
+                li Introducing a New Paradigm shift to a rapidly changing healthcare landscape.
+                li Planning and designing medical facilities with Operational Efficiency in Urban area.
+                li Induce Health-promoting environments which contribute positive outcomes for patients as well as for those who work and live
+
+            +marketing('Objectives')
+              p(class="card-text") It is necessary to build a good hospital on a triad of good planning, good design, construction and administration.
+              ul
+                li Highly Functional – Easy to maintain & User-friendly
+                li Viable Proposition – Design solution evolved shall be viable to promoters and investors.
+                li Energy Efficient – Using Environment aspects, Natural light and ventilation with ample landscaping
+                li Patient friendly – Inculcating a sense of good health, respect and dignity.
+          br
+          hr
+          br
+
+          <!-- Location Section -->
+          div(class="row" id="location")
+            div(class="col-lg-6")
+              h2 Location
+              p The Site is located along the Vijaywada- Hyderabad Highway, connecting two majors cities Hyderabad and VIjaywada.
+              ul
+                each val in ['53 kms from Amravathi', '21 kms from Vijaywada', '3 kms from Ibrahimpatnam', '53 kms from Guntur']
+                  li= val
+
+            div(class="col-lg-6")
+              img(class="img-fluid rounded" src="../images/location.jpg" alt="")
+
+          br
+          hr
+          br
+
+          <!-- contact Section -->
+          div(id='contact')
+
+        include footer.pug

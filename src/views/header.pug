@@ -1,0 +1,26 @@
+header
+    div(id="carouselExampleIndicators" class="carousel slide" data-ride="carousel")
+        ol(class="carousel-indicators")
+            li(data-target="#carouselExampleIndicators" data-slide-to="0" class="active")
+            li(data-target="#carouselExampleIndicators" data-slide-to="1")
+            li(data-target="#carouselExampleIndicators" data-slide-to="2")
+        div(class="carousel-inner" role="listbox")
+            <!-- Slide One - Set the background image for this slide in the line below -->
+            div(class="item carousel-item active" style="background-image: url('./images/one.jpg')")
+                div(class="carousel-caption d-none d-md-block")
+                    h3 East Side View
+                    p This is an aerial view of the whole campus.
+            div(class="item carousel-item" style="background-image: url('./images/two.jpg')")
+                div(class="carousel-caption d-none d-md-block")
+                    h3 Front View
+                    p A view from the enterance.
+            div(class="item carousel-item" style="background-image: url('./images/three.jpg')")
+                div(class="carousel-caption d-none d-md-block")
+                    h3 Hosipital building
+                    p This a front view of the hosipital.
+        a(class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev")
+            span(class="carousel-control-prev-icon" aria-hidden="true")
+            span(class="sr-only") Previous
+        a(class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next")
+            span(class="carousel-control-next-icon" aria-hidden="true")
+            span(class="sr-only") Next
